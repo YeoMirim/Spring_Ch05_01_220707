@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="student1" class="com.mirim.di.Student">
+	
+		<constructor-arg>
+			<value>홍길순</value>
+		</constructor-arg>			<!-- Student.java의 변수값 설정, 갯숫 일치시켜야함 -->
+		
+		<constructor-arg>
+			<value>10살</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>3학년</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>6반</value>
+		</constructor-arg>
+		
+	</bean>
+	
+	<bean id="student2" class="com.mirim.di.Student">
+	
+		<constructor-arg>
+			<value>신짱구</value>
+		</constructor-arg>			<!-- Student.java의 변수값 설정, 갯숫 일치시켜야함 -->
+		
+		<constructor-arg>
+			<value>15살</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>2학년</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>7반</value>
+		</constructor-arg>
+		
+	</bean>
+	
+	<bean id="studentInfo" class="com.mirim.di.StudentInfo">
+	
+		<constructor-arg>
+			<ref bean="student1" />		<!-- 생성자가 있으므로 student1을 초기화 시킴 -->
+		</constructor-arg>
+	
+	</bean>
+
+</beans>
